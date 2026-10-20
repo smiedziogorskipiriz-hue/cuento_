@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuento Infantil Interactivo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Librería PDF.js para procesar el PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <!-- Librería PageFlip para la paginación -->
+    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>✨ Cuento Infantil ✨</h1>
+        <p>Disfruta de la lectura de nuestro cuento mágico</p>
+
+        <!-- Barra de herramientas accesible y de navegación para niños -->
+        <div class="controls-toolbar">
+            <button id="btn-prev" class="btn magic-btn" aria-label="Página Anterior">⬅️ Anterior</button>
+            <span id="page-indicator" class="page-indicator">Página 1</span>
+            <button id="btn-next" class="btn magic-btn" aria-label="Página Siguiente">Siguiente ➡️</button>
+
+            <div class="divider"></div>
+
+            <!-- Accesibilidad: Lectura en voz alta y zoom/tamaño -->
+            <button id="btn-read" class="btn accessibility-btn" aria-label="Lectura en Voz Alta">🔊 Leer en Voz Alta</button>
+            <button id="btn-zoom-in" class="btn accessibility-btn" aria-label="Agrandar Letra">A+</button>
+            <button id="btn-zoom-out" class="btn accessibility-btn" aria-label="Achicar Letra">A-</button>
+        </div>
+
+        <div id="loading">✨ Cargando la magia del cuento...</div>
+    </div>
+
+    <div class="book-container">
+        <!-- El flipbook se generará aquí -->
+        <div id="flip-book" class="flip-book"></div>
+    </div>
+
+    <!-- Elemento visual de la varita mágica que animará el pase de páginas -->
+    <div id="magic-wand" class="magic-wand hidden">🪄✨</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
